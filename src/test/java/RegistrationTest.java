@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -48,10 +49,10 @@ public class RegistrationTest {
     // public void hello() {}
 @Test
   public void testRegistration() throws Exception {
-      WebDriverManager.firefoxdriver().setup();
-        WebDriver driver=new FirefoxDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+     WebDriverManager.chromedriver().setup();
+      WebDriver driver=new ChromeDriver();
+      driver.manage().window().maximize();
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     driver.get("https://www.google.com/");
     driver.get("https://www.advantageonlineshopping.com/#/");
     driver.findElement(By.id("speakersTxt")).click();
@@ -118,7 +119,7 @@ public class RegistrationTest {
     driver.findElement(By.name("postal_codeRegisterPage")).sendKeys("57686");
     driver.findElement(By.name("i_agree")).click();
     driver.findElement(By.id("register_btnundefined")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='First Name'])[2]/preceding::button[1]")).click();
+    
   }
 
 }

@@ -45,21 +45,23 @@ public class PopularItemTest {
     //
     // @Test
     // public void hello() {}
-
 @Test
   public void testPopularItem() throws Exception {
       WebDriverManager.chromedriver().setup();
       WebDriver driver=new ChromeDriver();
       driver.manage().window().maximize();
       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-      driver.get("https://www.google.com/");
-      driver.get("https://www.advantageonlineshopping.com/#/");
-      driver.findElement(By.linkText("POPULAR ITEMS")).click();
-      driver.findElement(By.id("details_21")).click();
-      driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[2]")).click();
-      driver.findElement(By.xpath("//div[@id='productProperties']/div[2]/e-sec-plus-minus/div/div[3]")).click();
-      driver.findElement(By.name("save_to_cart")).click();
-      driver.findElement(By.id("checkOutPopUp")).click();
+    driver.get("https://www.google.com/");
+    driver.get("https://www.advantageonlineshopping.com/#/");
+    driver.findElement(By.id("details_21")).click();
+    driver.findElement(By.xpath("//div[@id='productProperties']/div/div[2]/span[3]")).click();
+    driver.findElement(By.name("save_to_cart")).click();
+    driver.findElement(By.linkText("HOME")).click();
+    driver.findElement(By.id("details_16")).click();
+    driver.findElement(By.xpath("//div[@id='productProperties']/div/div/span[2]")).click();
+    driver.findElement(By.xpath("//div[@id='productProperties']/div[2]/e-sec-plus-minus/div/div[3]")).click();
+    driver.findElement(By.name("save_to_cart")).click();
+    driver.findElement(By.id("checkOutPopUp")).click();
   }
   
 }
