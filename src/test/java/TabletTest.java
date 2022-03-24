@@ -75,31 +75,5 @@ public class TabletTest {
         driver.findElement(By.xpath("//div[@id='productProperties']/div[2]/e-sec-plus-minus/div/div[3]")).click();
         driver.findElement(By.name("save_to_cart")).click();
         driver.findElement(By.id("checkOutPopUp")).click();
-  }
-    @Test
-  public void testTabletFilters() throws Exception {
-      WebDriverManager.chromedriver().setup();
-        WebDriver driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-    driver.get("https://www.google.com/");
-    driver.get("https://www.advantageonlineshopping.com/#/");
-    driver.findElement(By.id("tabletsTxt")).click();
-    driver.findElement(By.id("accordionPrice")).click();
-    driver.findElement(By.xpath("//div[@id='slider']/div/div/div")).click();
-    driver.findElement(By.id("accordionAttrib0")).click();
-    driver.findElement(By.id("display_0")).click();
-    driver.findElement(By.id("display_1")).click();
-    driver.findElement(By.id("accordionAttrib1")).click();
-    driver.findElement(By.id("processor_0")).click();
-    driver.findElement(By.id("accordionColor")).click();
-    driver.findElement(By.id("productsColorsC3C3C3")).click();
-    driver.findElement(By.linkText("HP ElitePad 1000 G2 Tablet")).click();
-    driver.findElement(By.xpath("//div[@id='productProperties']/div/div/span[2]")).click();
-    driver.findElement(By.xpath("//div[@id='productProperties']/div[2]/e-sec-plus-minus/div/div[3]")).click();
-    driver.findElement(By.xpath("//div[@id='productProperties']/div[2]/e-sec-plus-minus/div/div")).click();
-    driver.findElement(By.name("save_to_cart")).click();
-    driver.findElement(By.id("checkOutPopUp")).click();
-  }
-  }
-  
+  }  
+  }  

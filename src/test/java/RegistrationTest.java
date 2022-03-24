@@ -118,7 +118,8 @@ public class RegistrationTest {
     driver.findElement(By.name("postal_codeRegisterPage")).sendKeys("57686");
     driver.findElement(By.name("i_agree")).click();
     driver.findElement(By.id("register_btnundefined")).click();
-    
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='First Name'])[2]/preceding::button[1]")).click();
   }
+
 }
 
